@@ -1,0 +1,6 @@
+pre.hljs {
+  padding: 1rem;
+  border-radius: .5rem;
+  overflow: auto;
+  font-size: 0.95rem;
+}
