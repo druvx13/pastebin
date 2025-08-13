@@ -1,0 +1,10 @@
+# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+#
+# Allow all crawlers full access to the site.
+# The application logic itself prevents access to non-public pastes via the 'noindex' meta tag.
+User-agent: *
+Allow: /
+
+# Point to the sitemap.
+# IMPORTANT: Replace 'your-domain.com' with your actual domain name.
+Sitemap: https://your-domain.com/sitemap.xml.php
