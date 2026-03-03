@@ -1,19 +1,19 @@
-      </main><!-- end #main -->
+        </section><!-- end main section -->
 
-      <!-- ===== SIDEBAR ===== -->
-      <?php include __DIR__ . '/sidebar.php'; ?>
+        <!-- SIDEBAR -->
+        <?php include __DIR__ . '/sidebar.php'; ?>
 
-    </div><!-- end flex wrapper -->
+      </main><!-- end grid -->
 
-    <!-- Footer -->
-    <footer class="mt-10 pb-4 text-center text-xs text-slate-400">
-      Pastebin &middot; PHP + MySQL + Tailwind CSS + highlight.js
-    </footer>
-  </div><!-- end page wrapper -->
+      <footer class="mt-8 text-center text-xs text-slate-400">
+        Pastebin — PHP + MySQL + Tailwind CSS + highlight.js
+      </footer>
+    </div><!-- end max-w-6xl -->
+  </div><!-- end min-h-screen -->
 
-  <!-- ===== Global JavaScript ===== -->
+  <!-- Global JavaScript -->
   <script>
-    // Run highlight.js on all code blocks once the DOM is ready
+    // Highlight all code blocks on load
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('pre code').forEach(function (el) {
         try { hljs.highlightElement(el); } catch (e) {}
@@ -47,11 +47,11 @@
           e.preventDefault();
           return;
         }
-        // Persist commenter name in a cookie for future prefills
+        // Persist commenter name in cookie for future prefills
         var nameInput = form.commenter_name;
         if (nameInput && nameInput.value.trim()) {
           document.cookie = 'commenter_name=' + encodeURIComponent(nameInput.value.trim())
-            + ';path=/;max-age=<?php echo COOKIE_LIFETIME; ?>;SameSite=Lax';
+            + ';path=/;max-age=<?php echo COOKIE_LIFETIME; ?>';
         }
       }
     });
